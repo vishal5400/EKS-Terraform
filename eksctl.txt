@@ -1,0 +1,20 @@
+aws eks update-kubeconfig --name eks-cluster --region us-east-1
+
+helm repo add nginx-stable https://helm.nginx.com/stable
+helm repo update
+
+To install the chart with the release name ingress-nginx:
+
+helm install ingress-nginx nginx-stable/nginx-ingress
+If the Kubernetes cluster has RBAC enabled, then run:
+
+helm install ingress-nginx nginx-stable/nginx-ingress --set rbac.create=true
+
+helm uninstall ingress-nginx
+
+
+helm repo remove eks
+
+kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller//crds?ref=master"
+
+helm upgrade -i aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=eks-cluster --set serviceAccount.create=false --set serviceAccount.name=alb-ingress-controller
