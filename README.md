@@ -8,6 +8,7 @@ This repository contains Terraform code to create an Amazon EKS (Elastic Kuberne
 - AWS CLI configured with appropriate credentials
 - kubectl
 - AWS IAM Authenticator for Kubernetes
+- Helm
 
 ## Setup Instructions
 
@@ -17,19 +18,13 @@ This repository contains Terraform code to create an Amazon EKS (Elastic Kuberne
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
 ```
-
-Here is the corrected and formatted README.md file for your project:
-
-README.md
-markdown
-Copy code
 # AWS EKS Cluster with Managed Node Group and ALB Ingress Controller using Terraform
 
 This repository contains Terraform code to create an Amazon EKS (Elastic Kubernetes Service) cluster with a managed node group and the AWS ALB (Application Load Balancer) Ingress Controller.
 
 ## Prerequisites
 
-- Terraform >= 0.12
+- Terraform
 - AWS CLI configured with appropriate credentials
 - kubectl
 - AWS IAM Authenticator for Kubernetes
