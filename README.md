@@ -44,3 +44,4 @@ cd your-repo
 ```
 ### 2. Configure Terraform Variables and apply
 
+**Note:** After that, set up the ALB Ingress Controller. Use the eksctl.txt file and follow the steps in the file. For testing everything, use the content in the kube folder. This folder contains the deployment file, service file, and ingress file.
